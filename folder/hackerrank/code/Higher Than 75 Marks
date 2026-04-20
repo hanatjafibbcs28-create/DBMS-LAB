@@ -1,0 +1,15 @@
+Query the Name of any student in STUDENTS who scored higher than 75 Marks.
+Order your output by the last three characters of each name. 
+If two or more students both have names ending in the same last three characters (i.e.: Bobby, Robby, etc.), secondary sort them by ascending ID.
+
+
+/*
+    Enter your query here and follow these instructions:
+    1. Please append a semicolon ";" at the end of the query and enter your query in a single line to avoid error.
+    2. The AS keyword causes errors, so follow this convention: "Select t.Field From table1 t" instead of "select t.Field From table1 AS t"
+    3. Type your code immediately after comment. Don't leave any blank line.
+*/
+SELECT Name
+FROM STUDENTS
+WHERE Marks > 75
+ORDER BY SUBSTR(Name, LENGTH(Name)-2, 3), ID;
